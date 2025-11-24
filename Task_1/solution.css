@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(213, 230, 251);
+}
+
+#box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 320px;
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#main {
+    font-size: 20px;
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+#sub {
+    font-size: 10px;
+    color: hsl(220, 15%, 55%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
