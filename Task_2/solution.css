@@ -1,6 +1,7 @@
+/* Global */
 body {
     background-color: hsl(47, 88%, 63%);
-    display: flex;
+    font-family: 'Figtree', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,17 +9,73 @@ body {
     margin: 0;
 }
 
+/* Card container */
 #main-box {
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 320px;
-    text-align: center;
-    margin: 0;
+    border-radius: 15px;
+    max-width: 340px;
+    text-align: left;
     box-shadow: 8px 8px 0 hsl(0, 0%, 7%);
+    border: 1px solid hsl(0, 0%, 7%);
 }
 
-img {
+/* Main image (exclude avatar) */
+#main-box img:not(#tiny_img) {
     width: 100%;
     border-radius: 10px;
+}
+
+/* Yellow "Learning" badge */
+#highlighted {
+    background-color: hsl(47, 88%, 63%);
+    color: hsl(0, 0%, 7%);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 18px;
+}
+
+/* Published date */
+#main-box p {
+    color: hsl(0, 0%, 7%);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Title */
+h1 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+h1:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+}
+
+/* Description text */
+#main-box p:nth-of-type(3) {
+    color: hsl(0, 0%, 42%);
+    line-height: 1.5;
+}
+
+/* Avatar + name */
+#tiny_img {
+    width: 20px;           /* avatar size */
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#main-box p:last-of-type {
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
 }
