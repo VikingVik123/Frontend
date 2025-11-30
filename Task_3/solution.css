@@ -6,12 +6,12 @@ body {
     flex-direction: column; /* center items vertically in a column */
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 #main-box {
     background-color: hsl(0, 0%, 12%);
-    max-width: 40rem;
+    max-width: 200rem;
     padding: 1rem;
     border-radius: 1.2rem;
     text-align: center;
@@ -19,6 +19,8 @@ body {
 
 #avatar {
     border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
 }
 
 #name {
@@ -49,7 +51,7 @@ body {
 #social-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* space between buttons */
+    gap: 0.7rem; /* space between buttons */
     margin-top: 1rem;
 }
 
