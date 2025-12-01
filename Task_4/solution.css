@@ -1,0 +1,67 @@
+body {
+    font-family: 'Young Serif', serif;
+    background-color: hsl(30, 54%, 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#box1 {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 50rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#prepbox {
+    background-color: hsl(330, 100%, 98%);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h3 {
+    color: hsl(332, 51%, 32%);
+}
+
+#ingheading {
+    color: hsl(14, 45%, 36%);
+}
+
+#instheading {
+    color: hsl(14, 45%, 36%);
+}
+
+#nutritional {
+    color: hsl(14, 45%, 36%);
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.nutrition-table tr {
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.nutrition-table td {
+    padding: 1rem 0;
+}
+
+.nutrition-table td:first-child {
+    color: hsl(30, 10%, 40%);
+}
+
+.nutrition-table td:last-child {
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+}
