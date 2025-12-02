@@ -6,13 +6,15 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    min-height: 70vh;
+    min-height: 100vh;
+    padding: 3rem 0;
+    margin: 0;
 }
 
 #mainbox {
     background-color: hsl(0, 0%, 100%);
     border-radius: 1rem;
-    max-width: 50rem;
+    max-width: 40rem;
     display: flex;            /* make children sit side-by-side */
     flex-direction: row;      /* horizontal layout */
     overflow: hidden;
