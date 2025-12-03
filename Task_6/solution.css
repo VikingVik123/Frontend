@@ -1,0 +1,11 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    font-weight: 200;
+    color: hsl(212, 6%, 44%);
+}
