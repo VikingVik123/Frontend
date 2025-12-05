@@ -1,0 +1,14 @@
+#box1 {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+#box2 {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+#box3 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
