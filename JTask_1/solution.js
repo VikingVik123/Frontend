@@ -1,7 +1,14 @@
-const btn = document.getElementById('share-btn');
-const popup = document.getElementById('share-popup');
+// script.js
+const shareBtn = document.querySelector('.share-btn');
+const popup = document.querySelector('.share-popup');
+const authorBox = document.querySelector('.author-box');
 
-btn.addEventListener('click', () => {
-  popup.classList.toggle('show');
-  btn.classList.toggle('active');
+shareBtn.addEventListener('click', () => {
+  shareBtn.classList.toggle('active');
+  popup.classList.toggle('active');
+  
+  // On mobile: hide author info when popup is open
+  if (window.innerWidth <= 680) {
+    authorBox.classList.toggle('active');
+  }
 });
