@@ -1,0 +1,23 @@
+body {
+    background: hsl(234, 29%, 20%);
+  }
+
+  .card {
+  background: white;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  max-width: 56rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+  .illustration {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  .illustration img {
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
