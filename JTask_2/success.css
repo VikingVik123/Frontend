@@ -1,0 +1,49 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: hsl(235, 18%, 26%);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+#succ {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  display: flex;
+  align-items: flex-start;
+  max-width: 20rem;
+  width: 100%;
+  flex-direction: column;
+}
+
+#mark {
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+#dismiss-btn {
+  width: 100%;
+  background: hsl(235, 28%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 0.9rem 1.25rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 1.25rem;
+}
+
+#dismiss-btn:active {
+  background: hsl(4, 100%, 67%);
+  transform: translateY(0);
+}

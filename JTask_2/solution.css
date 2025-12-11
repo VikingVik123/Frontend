@@ -1,174 +1,165 @@
-
-
 body {
   font-family: 'Roboto', sans-serif;
-  background: hsl(235, 18%, 26%);
-  color: hsl(234, 29%, 20%);
+  background-color: hsl(235, 18%, 26%);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  line-height: 1.5;
+  padding: 3rem 1rem;
 }
 
-/* ==== Card shared styles ==== */
-.card {
-  background: white;
-  border-radius: 2rem;
-  padding: 1.5rem;
-  max-width: 56rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* ==== Mobile first ==== */
-.illustration img {
+#mainbox {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  min-width: 30rem;
+  padding: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 660px;
   width: 100%;
-  border-radius: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-.content {
-  padding: 0 0.5rem;
+  margin: 0 auto;
+  box-shadow: 0 30px 60px rgba(16, 24, 40, 0.55);
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: hsl(234, 29%, 20%);
-}
-
-.content > p {
-  margin-bottom: 1.5rem;
-}
-
-.benefits {
-  list-style: none;
-  margin-bottom: 2.5rem;
-}
-
-.benefits li {
-  padding-left: 2rem;
-  background: url('./assets/images/icon-list.svg') no-repeat left 0.35rem;
-  background-size: url('./assets/images/icon-list.svg') no-repeat left top 0.35rem;
-  margin-bottom: 0.75rem;
-}
-
-label {
-  font-size: 0.8rem;
   font-weight: 700;
 }
 
-.label-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+.content {
+  flex: 1 1 auto;
 }
 
-.error-message {
-  color: hsl(4, 100%, 67%);
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: none;
+.illustration {
+  max-width: 420px;
+  width: 45%;
+  order: 2;
+  border-radius: 0.4rem;
+  object-fit: cover;
 }
 
-input {
+#signup-form {
+  margin-top: 0.5rem;
+}
+
+#signup-form input[type="email"] {
   width: 100%;
-  padding: 1.1rem 1.5rem;
-  border: 1px solid hsl(231, 7%, 60%);
+  padding: 0.85rem 1rem;
   border-radius: 0.5rem;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  border: 1px solid hsl(233, 8%, 90%);
+  font-size: 0.95rem;
+  background: hsl(0, 0%, 100%);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
 }
 
-input:focus {
+#signup-form input[type="email"]:focus,
+#signup-form input[type="email"]:active {
   outline: none;
-  border-color: hsl(234, 29%, 20%);
-}
-
-input.invalid {
-  background-color: hsla(4, 100%, 67%, 0.1);
   border-color: hsl(4, 100%, 67%);
-  color: hsl(4, 100%, 67%);
 }
 
-button {
+#btn {
   width: 100%;
-  padding: 1.1rem;
-  background: hsl(234, 29%, 20%);
-  color: white;
+  background: hsl(235, 28%, 12%);
+  color: hsl(0, 0%, 100%);
   border: none;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  font-size: 1rem;
+  padding: 0.9rem 1.25rem;
+  border-radius: 0.75rem;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
-  background: linear-gradient(to right, #ff6a95, #ff527b);
-  box-shadow: 0 10px 20px rgba(255, 82, 123, 0.3);
+#btn:active {
+  background: hsl(4, 100%, 67%);
+  transform: translateY(0);
 }
 
-/* ==== Success state ==== */
-.success-card {
-  display: flex;
-  flex-direction: column;
-  max-width: 24rem;
-  gap: 1.5rem;
-  padding: 3rem 2rem;
+.input-label {
+  display: block;
+  font-size: 0.78rem;
+  color: hsl(233, 8%, 62%);
+  margin-top: 1.25rem;
 }
 
-.success-icon {
-  width: 4rem;
+/* tighten up heading to match reference */
+.content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.6rem 0;
+  color: hsl(235, 18%, 12%);
 }
 
-.success-card h1 {
-  font-size: 2.8rem;
-  line-height: 1.2;
+/* Custom list bullet icons */
+.content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
 }
 
-#dismiss-btn {
-  margin-top: 1rem;
+.content ul li {
+  padding-left: 2.25rem;
+  margin-bottom: 0.65rem;
+  background-image: url('./newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg');
+  background-repeat: no-repeat;
+  background-position: left top 0.15rem;
+  background-size: 1.25rem;
 }
 
-/* ==== Desktop layout ==== */
-@media (min-width: 768px) {
-  body {
-    background: hsl(234, 29%, 20%);
+
+
+/* small tweak to box corners for the image area to feel inset */
+.illustration { box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+
+/* Accessibility helper to visually hide labels but keep them for screen readers */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  body { 
+    height: auto;
+    padding: 0;
+    justify-content: flex-start;
   }
-
-  .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 1.5rem;
+  
+  #mainbox { 
+    flex-direction: column;
+    min-width: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    gap: 0;
   }
-
-  .illustration {
-    grid-column: 2 / 3;
-    grid-row: 1;
-  }
-
-  .illustration img {
-    height: 100%;
-    object-fit: cover;
+  
+  .illustration { 
+    order: 1;
+    width: 100%;
+    max-width: none;
+    border-radius: 0 0 1rem 1rem;
     margin-bottom: 0;
   }
-
-  .content {
-    grid-column: 1 / 2;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem 2rem 3rem 4rem;
+  
+  .content { 
+    order: 2;
+    padding: 2rem 1.5rem;
   }
-
-  h1 {
-    font-size: 3.5rem;
+  
+  .content h1 {
+    font-size: 2.25rem;
   }
-
-  .success-card[hidden] {
-    display: none;
+  
+  .content p,
+  .content ul {
+    font-size: 0.95rem;
   }
 }
