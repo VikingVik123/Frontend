@@ -1,3 +1,4 @@
+/* base */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: hsl(235, 18%, 26%);
@@ -7,29 +8,21 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding: 3rem 1rem;
+  margin: 0;
 }
 
 #mainbox {
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem;
-  min-width: 30rem;
   padding: 2.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  max-width: 660px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
   box-shadow: 0 30px 60px rgba(16, 24, 40, 0.55);
-}
-
-h1 {
-  font-weight: 700;
-}
-
-.content {
-  flex: 1 1 auto;
 }
 
 .illustration {
@@ -38,62 +31,23 @@ h1 {
   order: 2;
   border-radius: 0.4rem;
   object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
 
-#signup-form {
-  margin-top: 0.5rem;
+.content {
+  flex: 1 1 auto;
 }
 
-#signup-form input[type="email"] {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid hsl(233, 8%, 90%);
-  font-size: 0.95rem;
-  background: hsl(0, 0%, 100%);
-  box-sizing: border-box;
-  transition: border-color 0.2s ease;
-}
+h1 { font-weight: 700; }
 
-#signup-form input[type="email"]:focus,
-#signup-form input[type="email"]:active {
-  outline: none;
-  border-color: hsl(4, 100%, 67%);
-}
-
-#btn {
-  width: 100%;
-  background: hsl(235, 28%, 12%);
-  color: hsl(0, 0%, 100%);
-  border: none;
-  padding: 0.9rem 1.25rem;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  font-weight: 700;
-  margin-top: 1.25rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-#btn:active {
-  background: hsl(4, 100%, 67%);
-  transform: translateY(0);
-}
-
-.input-label {
-  display: block;
-  font-size: 0.78rem;
-  color: hsl(233, 8%, 62%);
-  margin-top: 1.25rem;
-}
-
-/* tighten up heading to match reference */
 .content h1 {
   font-size: 2.5rem;
   margin: 0 0 0.6rem 0;
   color: hsl(235, 18%, 12%);
 }
 
-/* Custom list bullet icons */
+.content p, .content ul { color: hsl(233, 8%, 35%); }
+
 .content ul {
   list-style: none;
   padding-left: 0;
@@ -109,57 +63,97 @@ h1 {
   background-size: 1.25rem;
 }
 
-
-
-/* small tweak to box corners for the image area to feel inset */
-.illustration { box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
-
-/* Accessibility helper to visually hide labels but keep them for screen readers */
-.sr-only {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+/* label row / error text */
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
 }
 
+.input-label {
+  display: block;
+  font-size: 0.78rem;
+  color: hsl(233, 8%, 62%);
+}
+
+/* error text */
+.error-text {
+  font-size: 0.78rem;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+}
+.hidden { display: none; }
+
+/* input & button */
+#signup-form { margin-top: 0.5rem; }
+
+#signup-form input[type="email"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(233, 8%, 90%);
+  font-size: 0.95rem;
+  background: hsl(0, 0%, 100%);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.15s ease;
+}
+
+#signup-form input[type="email"]:focus {
+  outline: none;
+  border-color: hsl(4, 100%, 67%);
+}
+
+/* error input state */
+.error-input {
+  border-color: hsl(4, 100%, 67%) !important;
+  background-color: hsla(4, 100%, 67%, 0.08);
+  color: hsl(4, 100%, 67%);
+}
+
+/* button */
+#signup-form button,
+#btn,
+#dismiss-btn {
+  width: 100%;
+  background: hsl(235, 28%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 0.9rem 1.25rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 1.25rem;
+}
+
+#signup-form button:active,
+#dismiss-btn:active {
+  background: hsl(4, 100%, 67%);
+  transform: translateY(0);
+}
+
+/* success page */
+.success-box {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  display: flex;
+  align-items: flex-start;
+  max-width: 20rem;
+  width: 100%;
+  flex-direction: column;
+}
+
+#mark {
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* responsive tweaks */
 @media (max-width: 700px) {
-  body { 
-    height: auto;
-    padding: 0;
-    justify-content: flex-start;
-  }
-  
-  #mainbox { 
-    flex-direction: column;
-    min-width: auto;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    gap: 0;
-  }
-  
-  .illustration { 
-    order: 1;
-    width: 100%;
-    max-width: none;
-    border-radius: 0 0 1rem 1rem;
-    margin-bottom: 0;
-  }
-  
-  .content { 
-    order: 2;
-    padding: 2rem 1.5rem;
-  }
-  
-  .content h1 {
-    font-size: 2.25rem;
-  }
-  
-  .content p,
-  .content ul {
-    font-size: 0.95rem;
-  }
+  #mainbox { flex-direction: column; padding: 0; border-radius: 0; box-shadow: none; gap: 0; width: 100%; }
+  .illustration { order: 1; width: 100%; border-radius: 0 0 1rem 1rem; }
+  .content { order: 2; padding: 2rem 1.5rem; }
 }

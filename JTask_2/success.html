@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="success.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter success message</title>
-
+  <link rel="stylesheet" href="solution.css">
+  <title>Success</title>
+  <script src="solution.js" defer></script>
 </head>
 <body>
-    <div id="succ">
-    <!-- Success message start -->
-     <img id="mark" src="./newsletter-sign-up-with-success-message-main/assets/images/icon-success.svg">
-
+  <div id="succ" class="success-box">
+    <img id="mark" src="./newsletter-sign-up-with-success-message-main/assets/images/icon-success.svg" alt="">
     <h1>Thanks for subscribing!</h1>
-    <p>A confirmation email has been sent to ash@loremcompany.com. 
-    Please open it and click the button inside to confirm your subscription.</p>
-
-    <button id="dismiss-btn">Dismiss message</button>
-
-  <!-- Success message end -->
-
-</div>
+    <p id="success-message">
+      A confirmation email has been sent to <strong>placeholder@example.com</strong>.
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button id="dismiss-btn" type="button">Dismiss message</button>
+  </div>
 </body>
 </html>

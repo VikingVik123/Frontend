@@ -1,14 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: hsl(235, 18%, 26%);
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  padding: 3rem 1rem;
+  padding: 0;   /* FIXED */
 }
 
+/* SUCCESS CARD */
 #succ {
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem;
@@ -20,6 +20,7 @@ body {
   flex-direction: column;
 }
 
+/* SUCCESS ICON */
 #mark {
   align-self: flex-start;
   margin-bottom: 1.5rem;
@@ -27,10 +28,13 @@ body {
   height: 3rem;
 }
 
+/* HEADING */
 h1 {
-    font-weight: 700;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
+/* BUTTON */
 #dismiss-btn {
   width: 100%;
   background: hsl(235, 28%, 12%);
@@ -46,4 +50,82 @@ h1 {
 #dismiss-btn:active {
   background: hsl(4, 100%, 67%);
   transform: translateY(0);
+}
+
+/* ERROR TEXT */
+#error-text {
+  font-size: 0.78rem;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+/* ------------------------------------ */
+/*               MOBILE VIEW            */
+/* ------------------------------------ */
+
+@media (max-width: 480px) {
+
+  body {
+    background-color: white;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  #succ {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #mark {
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-top: 2rem;      /* matches FM */
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+    color: hsl(234, 29%, 20%);
+  }
+
+  #success-message {
+    font-size: 1rem;
+    color: hsl(234, 29%, 20%);
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #dismiss-btn {
+    width: 100%;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+    margin-top: auto;      /* pushes button to bottom */
+    margin-bottom: 1rem;
+  }
 }

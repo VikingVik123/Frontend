@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="solution.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
+  <title>Newsletter sign-up</title>
+  <script src="solution.js" defer></script>
 </head>
 <body>
-
-  <!-- Sign-up form start -->
   <div class="MainBox" id="mainbox">
     <img id="dimg" class="illustration" src="./newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration">
 
@@ -29,15 +25,16 @@
         <li>And much more!</li>
       </ul>
 
-      <label for="email" class="input-label">Email address</label>
+      <div class="label-row">
+        <label for="email" class="input-label">Email address</label>
+        <span id="error-text" class="error-text hidden" role="alert">Valid email required</span>
+      </div>
+
       <form id="signup-form" novalidate>
-        <input type="email" id="email" name="email" placeholder="email@company.com" required>
+        <input type="email" id="email" name="email" placeholder="email@company.com" required aria-describedby="error-text">
+        <button id="btn" type="submit">Subscribe to monthly newsletter</button>
       </form>
-      <button id="btn" type="submit" form="signup-form">Subscribe to monthly newsletter</button>
     </div>
   </div>
-
-  <!-- Sign-up form end -->
-  
 </body>
 </html>
