@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="solution.css">
+  <script src="solution.js" defer></script>  
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+   <div class="dashboard-container">
+        <div class="user-card">
+            <div class="user-info">
+                <img class="user-avatar" src="./time-tracking-dashboard-main/images/image-jeremy.png" alt="Jeremy Robson">
+                <div class="user-text">
+                    <p class="report-label">Report for</p>
+                    <h1 class="user-name">Jeremy Robson</h1>
+                </div>
+            </div>
+            <div class="time-filters">
+                <button class="filter-btn" data-timeframe="daily">Daily</button>
+                <button class="filter-btn active" data-timeframe="weekly">Weekly</button>
+                <button class="filter-btn" data-timeframe="monthly">Monthly</button>
+            </div>
+        </div>
+
+        <div class="activity-card" data-activity="work">
+            <div class="card-bg work-bg">
+                <img src="./time-tracking-dashboard-main/images/icon-work.svg" alt="Work icon" class="activity-icon">
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="activity-title">Work</h2>
+                    <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="Menu" class="menu-icon">
+                </div>
+                <div class="card-stats">
+                    <p class="current-time">32hrs</p>
+                    <p class="previous-time">Last Week - 36hrs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-card" data-activity="play">
+            <div class="card-bg play-bg">
+                <img src="./time-tracking-dashboard-main/images/icon-play.svg" alt="Play icon" class="activity-icon">
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="activity-title">Play</h2>
+                    <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="Menu" class="menu-icon">
+                </div>
+                <div class="card-stats">
+                    <p class="current-time">10hrs</p>
+                    <p class="previous-time">Last Week - 8hrs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-card" data-activity="study">
+            <div class="card-bg study-bg">
+                <img src="./time-tracking-dashboard-main/images/icon-study.svg" alt="Study icon" class="activity-icon">
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="activity-title">Study</h2>
+                    <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="Menu" class="menu-icon">
+                </div>
+                <div class="card-stats">
+                    <p class="current-time">4hrs</p>
+                    <p class="previous-time">Last Week - 7hrs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-card" data-activity="exercise">
+            <div class="card-bg exercise-bg">
+                <img src="./time-tracking-dashboard-main/images/icon-exercise.svg" alt="Exercise icon" class="activity-icon">
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="activity-title">Exercise</h2>
+                    <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="Menu" class="menu-icon">
+                </div>
+                <div class="card-stats">
+                    <p class="current-time">4hrs</p>
+                    <p class="previous-time">Last Week - 5hrs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-card" data-activity="social">
+            <div class="card-bg social-bg">
+                <img src="./time-tracking-dashboard-main/images/icon-social.svg" alt="Social icon" class="activity-icon">
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="activity-title">Social</h2>
+                    <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="Menu" class="menu-icon">
+                </div>
+                <div class="card-stats">
+                    <p class="current-time">5hrs</p>
+                    <p class="previous-time">Last Week - 10hrs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-card" data-activity="self-care">
+            <div class="card-bg self-care-bg">
+                <img src="./time-tracking-dashboard-main/images/icon-self-care.svg" alt="Self Care icon" class="activity-icon">
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="activity-title">Self Care</h2>
+                    <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="Menu" class="menu-icon">
+                </div>
+                <div class="card-stats">
+                    <p class="current-time">2hrs</p>
+                    <p class="previous-time">Last Week - 2hrs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>

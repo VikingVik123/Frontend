@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rubik", sans-serif;
+    padding: 20px;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1110px;
+    width: 100%;
+}
+
+/* User Card */
+.user-card {
+    grid-row: span 2;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.user-info {
+    background-color: hsl(246, 80%, 60%);
+    padding: 35px 30px;
+    border-radius: 15px;
+}
+
+.user-avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 40px;
+}
+
+.user-text .report-label {
+    color: hsl(236, 100%, 87%);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.user-name {
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.time-filters {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: hsl(235, 45%, 61%);
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: white;
+}
+
+/* Activity Cards */
+.activity-card {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-bg {
+    height: 45px;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-icon {
+    position: absolute;
+    right: 17px;
+    top: -8px;
+    width: 79px;
+}
+
+.work-bg {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play-bg {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study-bg {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise-bg {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social-bg {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.self-care-bg {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.card-content {
+    background-color: hsl(235, 46%, 20%);
+    padding: 28px 30px;
+    border-radius: 15px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.card-content:hover {
+    background-color: hsl(235, 45%, 28%);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.activity-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu-icon {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 0.7;
+}
+
+.card-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.current-time {
+    color: white;
+    font-size: 56px;
+    font-weight: 300;
+}
+
+.previous-time {
+    color: hsl(236, 100%, 87%);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .user-card {
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+    
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 30px;
+    }
+    
+    .user-avatar {
+        margin-bottom: 0;
+    }
+    
+    .time-filters {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .user-card {
+        grid-column: span 1;
+    }
+    
+    .current-time {
+        font-size: 42px;
+    }
+}
