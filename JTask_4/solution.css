@@ -1,0 +1,201 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Mono", monospace;
+    flex-direction: column;   
+}
+
+#logo {
+    padding: 3rem;
+}
+
+/* MAIN CONTAINER: Side by side layout */
+#mainbox {
+    background-color: hsl(0, 100%, 100%);
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* responsive stacking */
+    max-width: 40rem;
+    border-radius: 1rem;
+}
+
+/* LEFT SECTION */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* INPUT BOX */
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 0.5rem;
+}
+
+/* INPUT WRAPPER (for icon + input) */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+#box {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    box-sizing: border-box;
+}
+
+#box:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+/* TIP SELECTION BUTTONS */
+.tip-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.tip-selection button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tip-selection button:hover,
+.tip-selection button.active {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.custom-tip input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: right;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.custom-tip input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+/* NUMBER OF PEOPLE */
+.people-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.people-input label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 0.5rem;
+}
+
+.people-input input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+}
+
+.people-input input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+/* RESULTS PANEL */
+.results-panel {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    flex: 1;
+    max-width: 200px; /* optional */
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-row h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+
+.result-row p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* RESET BUTTON */
+.reset-btn {
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+/* RESPONSIVE STACKING */
+@media (max-width: 700px) {
+    #mainbox {
+        flex-direction: column;
+    }
+    .results-panel {
+        max-width: 100%;
+    }
+}
