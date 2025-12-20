@@ -137,6 +137,18 @@ body {
     text-align: right;
 }
 
+.people-input input.error {
+    outline: 2px solid hsl(0, 70%, 60%);
+    background-color: hsl(0, 80%, 92%);
+}
+
+.error-message {
+    color: hsl(0, 70%, 60%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: auto;
+}
+
 .people-input input:focus {
     outline: 2px solid hsl(172, 67%, 45%);
 }
