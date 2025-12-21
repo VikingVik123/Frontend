@@ -28,8 +28,8 @@ body {
     background-color: hsl(213, 19%, 25%);
     padding: 1rem;
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     margin-bottom: 1.5rem;
 }
 
@@ -54,12 +54,32 @@ body {
 
 #ratings {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     margin: 1.5rem 0;
+}
+
+.rating-btn {
+    background-color: hsl(213, 19%, 25%);
+    color: hsl(217, 12%, 63%);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
     font-size: 0.875rem;
     font-weight: 700;
-    color: hsl(217, 12%, 63%);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.rating-btn:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+.rating-btn.active {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
 }
 
 #submit-btn {

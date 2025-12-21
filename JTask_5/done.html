@@ -5,20 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="done.css">
   <title>Frontend Mentor | Interactive rating component</title>
+  <script src="done.js" defer></script>
 
 </head>
 <body>
+  <div class="container" id="thank-you-container">
 
-<!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+  <!-- Thank you state start -->
+   <img src="./interactive-rating-component-main/images/illustration-thank-you.svg" alt="thank you illustration" class="thank-you-img">
+   
+   <div class="rating-badge">
+     <p>You selected <span id="selected-rating">0</span> out of 5</p>
+   </div>
+   
+   <h2 id="thank-you-heading">Thank you!</h2>
+   
+   <p id="thank-you-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+   don’t hesitate to get in touch!</p>
 
 <!-- Thank you state end -->
+  </div>
 </body>
 </html>
