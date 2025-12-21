@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.9375rem;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+.container {
+    background: radial-gradient(circle at top, hsl(213, 19%, 20%), hsl(213, 19%, 15%));
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-width: 25.75rem;
+    width: 100%;
+}
+
+.container img {
+    background-color: hsl(213, 19%, 25%);
+    padding: 1rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#text {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+#heading {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 0.625rem;
+    color: hsl(0, 0%, 100%);
+}
+
+#text p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: hsl(217, 12%, 63%);
+    font-weight: 400;
+}
+
+#ratings {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: hsl(217, 12%, 63%);
+}
+
+#submit-btn {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+#submit-btn:focus {
+    outline: 2px solid hsl(25, 97%, 53%);
+    outline-offset: 2px;
+}
