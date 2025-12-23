@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./ecommerce-product-page-main/images/favicon-32x32.png">
+  <link rel="stylesheet" href="solution.css">
+  <script src="solution.js" defer></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <img src="./ecommerce-product-page-main/images/icon-menu.svg" alt="Menu">
+        </button>
+        <img src="./ecommerce-product-page-main/images/logo.svg" alt="sneakers" class="logo">
+        <ul class="nav-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="cart-wrapper">
+          <button class="cart-btn" aria-label="Shopping cart">
+            <img src="./ecommerce-product-page-main/images/icon-cart.svg" alt="Cart">
+            <span class="cart-count">0</span>
+          </button>
+          <!-- Cart Dropdown -->
+          <div class="cart-dropdown">
+            <div class="cart-header">Cart</div>
+            <div class="cart-content">
+              <p class="cart-empty">Your cart is empty.</p>
+              <div class="cart-items"></div>
+            </div>
+          </div>
+        </div>
+        <img src="./ecommerce-product-page-main/images/image-avatar.png" alt="User Avatar" class="avatar">
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+      <button class="menu-close" aria-label="Close menu">
+        <img src="./ecommerce-product-page-main/images/icon-close.svg" alt="Close">
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Product Section -->
+    <main class="product-section">
+      <!-- Product Images -->
+      <div class="product-images">
+        <div class="main-image-wrapper">
+          <button class="nav-btn prev-btn-mobile" aria-label="Previous image">
+            <img src="./ecommerce-product-page-main/images/icon-previous.svg" alt="Previous">
+          </button>
+          <img src="./ecommerce-product-page-main/images/image-product-1.jpg" alt="Product" class="main-image" id="mainImage">
+          <button class="nav-btn next-btn-mobile" aria-label="Next image">
+            <img src="./ecommerce-product-page-main/images/icon-next.svg" alt="Next">
+          </button>
+        </div>
+        <div class="thumbnail-container">
+          <button class="thumbnail active" data-image="1">
+            <img src="./ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="Product thumbnail 1">
+          </button>
+          <button class="thumbnail" data-image="2">
+            <img src="./ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" alt="Product thumbnail 2">
+          </button>
+          <button class="thumbnail" data-image="3">
+            <img src="./ecommerce-product-page-main/images/image-product-3-thumbnail.jpg" alt="Product thumbnail 3">
+          </button>
+          <button class="thumbnail" data-image="4">
+            <img src="./ecommerce-product-page-main/images/image-product-4-thumbnail.jpg" alt="Product thumbnail 4">
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="product-details">
+        <p class="company-name">SNEAKER COMPANY</p>
+        <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+        <p class="product-description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they'll withstand everything the weather can offer.
+        </p>
+        <div class="price-section">
+          <div class="price-row">
+            <span class="current-price">$125.00</span>
+            <span class="discount-badge">50%</span>
+          </div>
+          <span class="original-price">$250.00</span>
+        </div>
+        <div class="actions">
+          <div class="quantity-selector">
+            <button class="quantity-btn decrease-btn" aria-label="Decrease quantity">
+              <img src="./ecommerce-product-page-main/images/icon-minus.svg" alt="Minus">
+            </button>
+            <span class="quantity-value">0</span>
+            <button class="quantity-btn increase-btn" aria-label="Increase quantity">
+              <img src="./ecommerce-product-page-main/images/icon-plus.svg" alt="Plus">
+            </button>
+          </div>
+          <button class="add-to-cart-btn">
+            <img src="./ecommerce-product-page-main/images/icon-cart.svg" alt="Cart">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay">
+      <div class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">
+          <img src="./ecommerce-product-page-main/images/icon-close.svg" alt="Close">
+        </button>
+        <div class="lightbox-content">
+          <button class="lightbox-nav-btn prev-btn" aria-label="Previous image">
+            <img src="./ecommerce-product-page-main/images/icon-previous.svg" alt="Previous">
+          </button>
+          <img src="./ecommerce-product-page-main/images/image-product-1.jpg" alt="Product" class="lightbox-image" id="lightboxImage">
+          <button class="lightbox-nav-btn next-btn" aria-label="Next image">
+            <img src="./ecommerce-product-page-main/images/icon-next.svg" alt="Next">
+          </button>
+        </div>
+        <div class="lightbox-thumbnails">
+          <button class="thumbnail active" data-image="1">
+            <img src="./ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="Product thumbnail 1">
+          </button>
+          <button class="thumbnail" data-image="2">
+            <img src="./ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" alt="Product thumbnail 2">
+          </button>
+          <button class="thumbnail" data-image="3">
+            <img src="./ecommerce-product-page-main/images/image-product-3-thumbnail.jpg" alt="Product thumbnail 3">
+          </button>
+          <button class="thumbnail" data-image="4">
+            <img src="./ecommerce-product-page-main/images/image-product-4-thumbnail.jpg" alt="Product thumbnail 4">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
