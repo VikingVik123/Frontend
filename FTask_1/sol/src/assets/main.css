@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
