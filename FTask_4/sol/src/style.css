@@ -1,5 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+    /* Light Mode Colors */
+    --body-bg: hsl(0, 0%, 98%);
+    --element-bg: hsl(0, 0%, 100%);
+    --text-color: hsl(200, 15%, 8%);
+    --input-color: hsl(0, 0%, 52%);
+}
+
+.dark-mode {
+    /* Dark Mode Colors */
+    --body-bg: hsl(207, 26%, 17%);
+    --element-bg: hsl(209, 23%, 22%);
+    --text-color: hsl(0, 0%, 100%);
+    --input-color: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#app {
+    min-height: 100vh;
 }
